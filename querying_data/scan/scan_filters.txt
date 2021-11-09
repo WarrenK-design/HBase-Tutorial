@@ -1,0 +1,25 @@
+scan 'employees', {FILTER => SingleColumnValueFilter.new(Bytes.toBytes('professional_data'), Bytes.toBytes('job_title'), CompareFilter::CompareOp.valueOf('EQUAL'), Bytes.toBytes('Software Developer')), COLUMNS => 'professional_data:job_title' }
+
+// Get all the Software Developers
+scan 'employee', { FILTER => "ValueFilter( =, 'binary:Software Developer')"}
+scan 'employee', { FILTER => "SingleColumnValueFilter('professional_data','job_title',=,'binary:Software Developer')"}
+scan 'employee', {FILTER => "SingleColumnValueExcludeFilter('professional_data','job_title',=,'binary:Software Developer')"}
+
+// Get all the employees with a salry over 90000
+scan 'employee',{ COLUMNS=>['personal_data:first_name','personal_data:second_name'],FILTER => "SingleColumnValueFilter('professional_data','salary',>, 'binary:50000')"}
+
+// Get all the Software Devs in Dublin on a Salary greater than or equal to 45000
+scan 'employee', {FILTER => "(SingleColumnValueFilter('professional_data','salary',>=,'binary:45000') AND SingleColumnValueFilter('professional_data','office_location',=,'binary:Dublin') AND SingleColumnValueFilter('professional_data','job_title',=,'binary:Software Developer'))"}
+
+
+// Inclusive Stop Filter 
+scan 'employee', {FILTER => "InclusiveStopFilter('CORK-009')"}
+
+// Regex match all phone numbers beginning with 087 
+scan 'employee', {COLUMNS=>['personal_data:first_name','personal_data:phone_number'],FILTER => "SingleColumnValueFilter('personal_data','phone_number',=,'regexstring:087[0-9]{7}$')"}
+
+
+// Substring Compartor 
+scan 'employee', {FILTER => "SingleColumnValueFilter('professional_data','job_title',=,'substring:Software')"}
+
+

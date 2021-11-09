@@ -1,0 +1,9 @@
+scan 'employee', {COLUMNS => ['personal_data:first_name','personal_data:second_name','professional_data:salary']}
+
+scan 'employee', {COLUMNS => ['personal_data:first_name'], LIMIT=>5}
+
+scan 'employee', {COLUMNS => ['personal_data:first_name'], LIMIT=>5, STARTROW=>'CORK-009'}
+
+scan 'employee', {COLUMNS => ['professional_data:salary'], TIMERANGE=>[1636311033000,1636318713000]}
+
+exit

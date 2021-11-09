@@ -1,0 +1,8 @@
+put 'employee', 'DUB-011', 'personal_data:first_name', 'Eddy',1275950425000
+put 'employee', 'DUB-011', 'personal_data:second_name', 'Jordan',1275950425000
+put 'employee', 'DUB-011', 'professional_data:job_title', 'Junior Engineer',1275950425000
+put 'employee', 'DUB-011', 'professional_data:salary', '35000',1275950425000
+put 'employee', 'DUB-011', 'professional_data:job_title', 'Senior Engineer',1433716825000
+put 'employee', 'DUB-011', 'professional_data:salary', '50000',1433716825000
+put 'employee', 'DUB-011', 'professional_data:job_title', 'Head of Engineering',1591569625000
+put 'employee', 'DUB-011', 'professional_data:salary', '70000',1591569625000

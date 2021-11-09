@@ -1,0 +1,5 @@
+get 'employee', 'DUB-001'
+get 'employee', 'DUB-001', {COLUMNS => ['personal_data:first_name','professional_data:job_title']}
+
+
+

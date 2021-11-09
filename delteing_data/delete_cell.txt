@@ -1,0 +1,4 @@
+delete 'employee', 'DUB-011', 'professional_data:salary'
+deleteall 'employee', 'DUB-011'
+deleteall 'employee', {ROWPREFIXFILTER => 'DUB'}, 'professional_data:salary'
+deleteall 'employee',{ROWPREFIXFILTER => 'DUB'}

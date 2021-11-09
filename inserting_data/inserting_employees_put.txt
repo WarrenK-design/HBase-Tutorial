@@ -1,0 +1,15 @@
+put 'employee', 'DUB-001', 'personal_data:first_name', 'John'
+put 'employee', 'DUB-001', 'personal_data:second_name', 'McCarthy'
+put 'employee', 'DUB-001', 'personal_data:phone_number','0871234567'
+put 'employee', 'DUB-001', 'professional_data:job_title','Regional Manager'
+put 'employee', 'DUB-001', 'professional_data:salary','50000'
+put 'employee', 'DUB-001', 'professional_data:office_location','Dublin'
+put 'employee', 'DUB-001', 'professional_data:employee_num', '1'
+put 'employee', 'CORK-002', 'personal_data:first_name', 'Patrick'
+put 'employee', 'CORK-002', 'personal_data:second_name', 'Kenny'
+put 'employee', 'CORK-002', 'professional_data:job_title','Junior Engineer'
+put 'employee', 'CORK-002', 'professional_data:salary','30000'
+put 'employee', 'CORK-002', 'professional_data:office_location', 'Cork'
+put 'employee', 'CORK-002', 'professional_data:employee_num', '2'
+exit
+

@@ -1,0 +1,5 @@
+disable 'employee'
+drop 'employee'
+create 'employee', {NAME=>'personal_data', VERSIONS=>4}, {NAME=>'professional_data',VERSIONS=>5}
+exit
+

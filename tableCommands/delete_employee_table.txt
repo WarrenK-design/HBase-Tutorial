@@ -1,0 +1,3 @@
+disable 'employee'
+drop 'employee'
+exit
